@@ -7,6 +7,7 @@ const Home: FunctionComponent = () => (
     <p>
       Home <HomeIcon className={styles.icon} />
     </p>
+    <p>New home CTA block much wow</p>
   </div>
 );
 
