@@ -1,5 +1,12 @@
 
 
+## 0.2.2 (2024-11-28)
+
+
+### Bug Fixes
+
+* **contact.tsx:** contact text fix ([12de734](https://github.com/thomasm0/release-it-test/commit/12de734521ca1e2fe039315aecbb28afb48e8a0d))
+
 ## 0.2.1 (2024-11-28)
 
 ## 0.2.0 (2024-11-28)
