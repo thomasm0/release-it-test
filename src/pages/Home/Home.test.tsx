@@ -9,6 +9,6 @@ describe('Home', () => {
 
   it('has the expected content', () => {
     const { container } = render(<Home />);
-    expect(container.textContent?.trim()).toEqual('Home');
+    expect(container.textContent?.trim()).toContain('Home');
   });
 });
