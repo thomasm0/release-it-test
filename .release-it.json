@@ -8,7 +8,13 @@
     "push": true
   },
   "github": {
-    "release": true
+    "release": true,
+    "draft": false,
+    "pr": {
+      "title": "chore(release): ${version}",
+      "body": "This PR includes the version bump and changelog updates for release ${version}.",
+      "base": "main"
+    }
   },
   "npm": {
     "publish": false
@@ -20,4 +26,5 @@
     }
   }
 }
+
 
