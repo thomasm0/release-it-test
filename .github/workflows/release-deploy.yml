@@ -31,7 +31,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # --only-version focuses on creating the tag and GitHub release
-        run: npx release-it --ci --only-version
+        run: npx release-it --ci --only-version --github.release --git.tag --git.push
 
       # Step 5: Deploy Application
       # Customize this to fit your deployment strategy
