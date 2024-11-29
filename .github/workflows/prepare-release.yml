@@ -21,31 +21,18 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # - name: Set up Node.js
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: 20.x # Use your project's Node.js version
-      #     cache: 'npm'
+      # Step 3: Configure Git user for step 5
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
 
-      # - name: Configure Git
-      #   run: |
-      #     git config --global user.name "GitHub Actions"
-      #     git config --global user.email "actions@github.com"
-
-      # - name: Install dependencies
-      #   run: npm install
-
-      # - name: Run release-it
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   run: npx release-it
-
-      # Step 3: Run Release-it in Dry-Run Mode
+      # Step 4: Run Release-it in Dry-Run Mode
       # This step generates a changelog and updates version files without pushing changes
       - name: Validate release (dry-run)
         run: npx release-it --dry-run
 
-      # Step 4: Prepare Version (optional if automated version bump is desired)
+      # Step 5: Prepare Version (optional if automated version bump is desired)
       # This example uses release-it to bump the version and generate a changelog
       - name: Prepare release (version bump)
         env:
