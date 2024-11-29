@@ -1,5 +1,12 @@
 
 
+## 0.2.6 (2024-11-29)
+
+
+### Bug Fixes
+
+* **home.tsx:** fix column bug in new home cta block ([#34](https://github.com/thomasm0/release-it-test/issues/34)) ([2ce6103](https://github.com/thomasm0/release-it-test/commit/2ce61032425a0c8e0965a50a3674143fa126114c))
+
 ## 0.2.5 (2024-11-29)
 
 
