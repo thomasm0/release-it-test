@@ -1,5 +1,17 @@
 
 
+## [0.4.0](https://github.com/thomasm0/release-it-test/compare/v0.3.0...v0.4.0) (2024-11-29)
+
+
+### Features
+
+* **about.tsx:** new image added to about page ([6453bd6](https://github.com/thomasm0/release-it-test/commit/6453bd6057a412ef8ad0455aefe3f291ecde3a12))
+
+
+### Bug Fixes
+
+* **home.tsx:** fix for home float ([317e445](https://github.com/thomasm0/release-it-test/commit/317e44528bd86a90bc8ba18789a5323716cdafac))
+
 ## [0.3.0](https://github.com/thomasm0/release-it-test/compare/v0.2.6...v0.3.0) (2024-11-29)
 
 
