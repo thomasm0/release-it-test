@@ -1,5 +1,12 @@
 
 
+## 0.2.5 (2024-11-29)
+
+
+### Bug Fixes
+
+* **.release-it.json:** fix release-it config ([e5b1f3a](https://github.com/thomasm0/release-it-test/commit/e5b1f3a6ec386eac6630c97b092a7a1466728321))
+
 ## 0.2.4 (2024-11-29)
 
 ## 0.2.3 (2024-11-29)

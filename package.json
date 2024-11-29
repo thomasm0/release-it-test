@@ -1,7 +1,7 @@
 {
   "name": "ee-react-template",
   "private": true,
-  "version": "0.2.4",
+  "version": "0.2.5",
   "scripts": {
     "start": "vite --host",
     "build": "tsc --project tsconfig.prod.json && vite build",
