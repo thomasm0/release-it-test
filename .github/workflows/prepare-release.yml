@@ -29,13 +29,15 @@ jobs:
 
       # Step 4: Run Release-it in Dry-Run Mode
       # This step generates a changelog and updates version files without pushing changes
-      - name: Validate release (dry-run)
-        run: npx release-it --dry-run
-
-      # Step 5: Prepare Version (optional if automated version bump is desired)
-      # This example uses release-it to bump the version and generate a changelog
+      # - name: Validate release (dry-run)
+      #   run: npx release-it --dry-run
+      # Step 4: Run Release-it to Prepare the Release
       - name: Prepare release (version bump)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx release-it --ci --no-git.tag --no-git.push
+
+      # Step 5: Push the Changes
+      - name: Push changes to the release branch
         run: |
           git push origin HEAD
