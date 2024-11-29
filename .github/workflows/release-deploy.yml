@@ -27,15 +27,32 @@ jobs:
 
       # Step 4: Create GitHub Release with Release-it
       # This step generates the tag, publishes the release, and updates GitHub
-      - name: Create GitHub release
+      # - name: Create GitHub release
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   # --only-version focuses on creating the tag and GitHub release
+      #   run: npx release-it --ci --only-version --github.release --git.tag --git.push
+
+      # # Step 5: Deploy Application
+      # # Customize this to fit your deployment strategy
+      # - name: Deploy application
+      #   run: |
+      #     echo "Deploying to production..."
+      #     # Add your deployment commands here
+
+      - name: Verify version bump
+        id: check_version
+        run: |
+          if ! git diff HEAD~1 HEAD --quiet -- package.json; then
+            echo "version_bumped=true" >> $GITHUB_ENV
+          else
+            echo "No version bump detected. Skipping release."
+            exit 0
+          fi
+
+      - name: Publish release
+        if: env.version_bumped == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        # --only-version focuses on creating the tag and GitHub release
-        run: npx release-it --ci --only-version --github.release --git.tag --git.push
-
-      # Step 5: Deploy Application
-      # Customize this to fit your deployment strategy
-      - name: Deploy application
         run: |
-          echo "Deploying to production..."
-          # Add your deployment commands here
+          npx release-it --ci --only-version --github.release --git.tag
