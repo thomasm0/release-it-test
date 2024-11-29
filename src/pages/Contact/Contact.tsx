@@ -2,7 +2,7 @@ import type { FunctionComponent } from 'react';
 
 const Contact: FunctionComponent = () => (
   <div>
-    <p>Contact</p>
+    <p>Contacting</p>
   </div>
 );
 

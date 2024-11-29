@@ -9,6 +9,6 @@ describe('Contact', () => {
 
   it('has the expected content', () => {
     const { container } = render(<Contact />);
-    expect(container.textContent).toEqual('Contact');
+    expect(container.textContent).toEqual('Contacting');
   });
 });

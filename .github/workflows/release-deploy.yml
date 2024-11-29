@@ -1,0 +1,35 @@
+# Handles tagging, releases, and deployment.
+name: Release and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout Code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Install Dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Step 3: Create GitHub Release with Release-it
+      # This step generates the tag, publishes the release, and updates GitHub
+      - name: Create GitHub release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # --only-version focuses on creating the tag and GitHub release
+        run: npx release-it --ci --only-version
+
+      # Step 4: Deploy Application
+      # Customize this to fit your deployment strategy
+      - name: Deploy application
+        run: |
+          echo "Deploying to production..."
+          # Add your deployment commands here
