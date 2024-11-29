@@ -24,6 +24,9 @@
       "preset": "conventionalcommits",
       "infile": "CHANGELOG.md"
     }
+  },
+  "hooks": {
+    "before:init": "echo 'Preparing release...'"
   }
 }
 
