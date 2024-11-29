@@ -9,6 +9,7 @@ const Home: FunctionComponent = () => (
     </p>
     <p>New home CTA block much wow</p>
     <p>New home CTA2 block much wow</p>
+    <p>New home CTA3 block much wow</p>
   </div>
 );
 
