@@ -5,10 +5,11 @@
     "tagName": "v${version}",
     "commitMessage": "Release v${version}",
     "tagAnnotation": "Release v${version}",
-    "push": true
+    "tag": false,
+    "push": false
   },
   "github": {
-    "release": true,
+    "release": false,
     "pr": {
       "title": "chore(release): ${version}",
       "body": "This PR includes the version bump and changelog updates for release ${version}.",
