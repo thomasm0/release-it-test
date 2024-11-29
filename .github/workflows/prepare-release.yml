@@ -38,6 +38,6 @@ jobs:
         run: npx release-it --ci --no-git.tag --no-git.push
 
       # Step 5: Push the Changes
-      - name: Push changes to the release branch
-        run: |
-          git push origin HEAD
+      # - name: Push changes to the release branch
+      #   run: |
+      #     git push origin HEAD
