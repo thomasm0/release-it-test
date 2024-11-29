@@ -8,7 +8,9 @@ const Home: FunctionComponent = () => (
       Home <HomeIcon className={styles.icon} />
     </p>
     <p>New home CTA block much wow</p>
-    <p>New home CTA2 block much wow</p>
+    <div style={{ float: 'left' }}>
+      <p>New home CTA2 block much wow</p>
+    </div>
   </div>
 );
 
