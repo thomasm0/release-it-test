@@ -5,11 +5,10 @@
     "tagName": "v${version}",
     "commitMessage": "Release v${version}",
     "tagAnnotation": "Release v${version}",
-    "tag": false,
-    "push": false
+    "push": true
   },
   "github": {
-    "release": false,
+    "release": true,
     "pr": {
       "title": "chore(release): ${version}",
       "body": "This PR includes the version bump and changelog updates for release ${version}.",
@@ -24,10 +23,5 @@
       "preset": "conventionalcommits",
       "infile": "CHANGELOG.md"
     }
-  },
-  "hooks": {
-    "before:init": "echo 'Preparing release...'"
   }
 }
-
-
