@@ -5,7 +5,7 @@ const NavigationMenu = (): JSX.Element => (
   <div className={styles.container} data-testid="navigation-menu">
     <Link to="/">Home</Link>
     <Link to="/contact">Contact</Link>
-    <Link to="/about">About</Link>
+    <Link to="/aboutt">About</Link>
   </div>
 );
 
