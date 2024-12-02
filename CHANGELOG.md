@@ -1,5 +1,12 @@
 
 
+## [0.5.0](https://github.com/thomasm0/release-it-test/compare/v0.4.0...v0.5.0) (2024-12-02)
+
+
+### Features
+
+* **navigationmenu:** about link change ([184482b](https://github.com/thomasm0/release-it-test/commit/184482bbe41545abd0f2788d01da931c6109330d))
+
 ## [0.4.0](https://github.com/thomasm0/release-it-test/compare/v0.3.0...v0.4.0) (2024-11-29)
 
 
